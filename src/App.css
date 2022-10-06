@@ -291,7 +291,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
 }
 .gallery .nav.nav-pills .nav-item {
-  width: 50%;
+  width: 33.33333%
 }
 .gallery .nav.nav-pills .nav-link {
   background-color: transparent;
@@ -329,6 +329,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 55px 0px 0px 55px;
 }
 .nav-link#gallery-tabs-tab-second {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 0 0;
+}
+.nav-link#gallery-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }

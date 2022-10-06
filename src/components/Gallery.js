@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import { firstTab, secondTab } from "./GalleryImages";
+import { firstTab, secondTab, thirdTab } from "./GalleryImages";
 
 export const Gallery = () => {
   return (
@@ -22,6 +22,9 @@ export const Gallery = () => {
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                    </Nav.Item>
+                    <Nav.Item>
+                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -52,6 +55,20 @@ export const Gallery = () => {
                             })
                           }
                         </Row>
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      <Row>
+                        {
+                          thirdTab.map((thirdTab, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...thirdTab}
+                                />
+                            )
+                          })
+                        }
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
